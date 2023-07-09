@@ -5,6 +5,7 @@ function pulaLinha() {
     echo "<br>";
 }
 
+$nome = "Marcos Aleixo";
 $email = 'marcos@alura.com.br';
 $senha = "123456";
 
@@ -31,5 +32,13 @@ pulaLinha();
 echo substr($email, $posicaoDoArroba + 1);
 pulaLinha();
 
+list($nome, $sobrenome) = (explode(' ', $nome));
 
+echo 'Nome: ' . $nome;
+pulaLinha();
 
+echo 'Sobrenome: ' . $sobrenome;
+pulaLinha();
+
+$csv = 'Marcos Aleixo,35,marcos@alura.com.br';
+var_dump(explode(',', $csv));
