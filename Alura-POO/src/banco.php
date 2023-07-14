@@ -3,7 +3,8 @@
 require 'D:\Arquivo\Documents\Github\PHP\Alura-POO\src\conta.php';
 
 $primeiraConta = new Conta('123.456.789-10', 'Marcos Aleixo');
-var_dump($primeiraConta) . PHP_EOL;
+var_dump($primeiraConta);
+echo '<br>';
 
 // $primeiraConta->definirCpfTitular();
 // $primeiraConta->definirNomeTitular();
@@ -28,4 +29,7 @@ $segundaConta->sacar(1100);
 $primeiraConta->transferir(1000, $segundaConta);
 
 var_dump($primeiraConta);
+echo '<br>';
 var_dump($segundaConta);
+echo '<br>';
+echo 'Número de contas: ' . Conta::recuperaNumeroDeContas();
