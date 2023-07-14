@@ -2,10 +2,11 @@
 
 require 'D:\Arquivo\Documents\Github\PHP\Alura-POO\src\conta.php';
 
-$primeiraConta = new Conta();
+$primeiraConta = new Conta('123.456.789-10', 'Marcos Aleixo');
+var_dump($primeiraConta) . PHP_EOL;
 
-$primeiraConta->definirCpfTitular('123.456.789-10');
-$primeiraConta->definirNomeTitular('Marcos Aleixo');
+// $primeiraConta->definirCpfTitular();
+// $primeiraConta->definirNomeTitular();
 
 $primeiraConta->depositar(1900);
 
@@ -13,10 +14,10 @@ echo $primeiraConta->recuperarSaldo() . "<br>";
 
 $primeiraConta->sacar(400);
 
-$segundaConta = new Conta();
+$segundaConta = new Conta('111.222.333-10', 'Vinicius Dias');
 
-$segundaConta->definirCpfTitular('111.222.333-10');
-$segundaConta->definirNomeTitular('Vinicius Dias');
+// $segundaConta->definirCpfTitular();
+// $segundaConta->definirNomeTitular();
 
 $segundaConta->depositar(1400);
 
