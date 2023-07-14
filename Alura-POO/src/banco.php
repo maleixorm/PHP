@@ -4,16 +4,27 @@ require 'D:\Arquivo\Documents\Github\PHP\Alura-POO\src\conta.php';
 
 $primeiraConta = new Conta();
 
-$primeiraConta->cpfTitular = '123.456.789-10';
-$primeiraConta->nomeTitular = 'Marcos Aleixo';
-$primeiraConta->saldo = 500;
+$primeiraConta->definirCpfTitular('123.456.789-10');
+$primeiraConta->definirNomeTitular('Marcos Aleixo');
 
-var_dump($primeiraConta);
+$primeiraConta->depositar(1900);
+
+echo $primeiraConta->recuperarSaldo() . "<br>";
+
+$primeiraConta->sacar(400);
 
 $segundaConta = new Conta();
 
-$segundaConta->cpfTitular = '111.222.333-10';
-$segundaConta->nomeTitular = 'Vinicius Dias';
-$segundaConta->saldo = 1200;
+$segundaConta->definirCpfTitular('111.222.333-10');
+$segundaConta->definirNomeTitular('Vinicius Dias');
 
+$segundaConta->depositar(1400);
+
+echo $segundaConta->recuperarSaldo() . "<br>";
+
+$segundaConta->sacar(1100);
+
+$primeiraConta->transferir(1000, $segundaConta);
+
+var_dump($primeiraConta);
 var_dump($segundaConta);
