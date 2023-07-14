@@ -6,12 +6,18 @@ class Conta {
     private float $saldo;
     private static int $numeroDeContas = 0;
 
-    public function __construct(string $cpfTitular, string $nomeTitular) {
+    public function __construct(string $cpfTitular, string $nomeTitular) 
+    {
         $this->cpfTitular = $cpfTitular;
         $this->validaNomeTitular($nomeTitular);
         $this->nomeTitular = $nomeTitular;
         $this->saldo = 0;
         Conta::$numeroDeContas++;
+    }
+
+    public function __destruct()
+    {
+        self::$numeroDeContas--;
     }
 
     public function sacar(float $valorASacar) : void {
