@@ -22,13 +22,10 @@ function funcao2()
 {
     echo 'Entrei na função 2' . pulaLinha();
 
-    $arrayFixo = new SplFixedArray(2);
-    $arrayFixo[3] = 'Valor';
-    $divisao = intdiv(5,0);
+    $exception = new RuntimeException("Essa é a mensagem de exception!");
+    throw $exception;
+    
 
-    for ($i = 1; $i <= 5; $i++) {
-        echo $i . pulaLinha();
-    }
     echo 'Saindo da função 2' . pulaLinha();
 }
 
