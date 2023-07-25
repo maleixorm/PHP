@@ -9,10 +9,10 @@ function funcao1()
     echo 'Entrei na função 1' . pulaLinha();
     try {
         funcao2();
-    } catch (RuntimeException | DivisionByZeroError $erro) {
-        echo $erro->getMessage() . pulaLinha();
-        echo $erro->getLine() . pulaLinha();
-        echo $erro->getTraceAsString() . pulaLinha();
+    } catch (Throwable $problema) {
+        echo $problema->getMessage() . pulaLinha();
+        echo $problema->getLine() . pulaLinha();
+        echo $problema->getTraceAsString() . pulaLinha();
     }
     
     echo 'Saindo da função 1' . pulaLinha();
@@ -22,9 +22,8 @@ function funcao2()
 {
     echo 'Entrei na função 2' . pulaLinha();
 
-    $exception = new RuntimeException("Essa é a mensagem de exception!");
-    throw $exception;
-    
+    intdiv(2,0);
+    throw new BadFunctionCallException("Essa é a mensagem de exception!");    
 
     echo 'Saindo da função 2' . pulaLinha();
 }
