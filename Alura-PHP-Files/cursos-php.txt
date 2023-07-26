@@ -1,0 +1,4 @@
+Design Patterns PHP I: Boas Práticas de Programação
+Design Patterns PHP II: Boas Práticas de Programação
+Design Patterns PHP III: Boas Práticas de Programação
+Design Patterns PHP IV: Boas Práticas de Programação
