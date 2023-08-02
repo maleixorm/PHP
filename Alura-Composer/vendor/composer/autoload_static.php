@@ -30,7 +30,7 @@ class ComposerStaticInitdefa58418a921e16a1b798b96c0180e1
         'M' => 
         array (
             'Masterminds\\' => 12,
-            'Maleixorm\\BuscadorCursos\\' => 25,
+            'Maleixorm\\BuscadorDeCursos\\' => 27,
         ),
         'G' => 
         array (
@@ -70,7 +70,7 @@ class ComposerStaticInitdefa58418a921e16a1b798b96c0180e1
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Maleixorm\\BuscadorCursos\\' => 
+        'Maleixorm\\BuscadorDeCursos\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
