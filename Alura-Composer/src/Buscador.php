@@ -9,7 +9,6 @@ class Buscador
 {
     private $httpClient;
     private $crawler;
-    
     public function __construct(ClientInterface $httpClient, Crawler $crawler)
     {
         $this->httpClient = $httpClient;
@@ -27,8 +26,7 @@ class Buscador
         $elementoCursos = $this->crawler->filter('span.card-curso__nome');
         $cursos = [];
 
-        foreach ($elementoCursos as $elemento)
-        {
+        foreach ($elementoCursos as $elemento) {
             $cursos[] = $elemento->textContent;
         }
 
