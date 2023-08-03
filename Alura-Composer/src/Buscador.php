@@ -20,7 +20,6 @@ class Buscador
         $resposta = $this->httpClient->request('GET', $url);
 
         $html = $resposta->getBody();
-
         $this->crawler->addHtmlContent($html);
 
         $elementoCursos = $this->crawler->filter('span.card-curso__nome');
