@@ -5,7 +5,7 @@ use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
 
 require_once 'vendor/autoload.php';
 
-$pdo = ConnectionCreator::createConection();
+$pdo = ConnectionCreator::createConnection();
 
 $sqlDelete = "DELETE FROM students WHERE id = ?;";
 $preparedStatement = $pdo->prepare($sqlDelete);
