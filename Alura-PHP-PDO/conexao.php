@@ -1,26 +1,19 @@
 <?php
 
-$caminhoBanco = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $caminhoBanco);
+require_once 'vendor/autoload.php';
 
-echo 'Conectei<br><br>';
+use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
-$createTableSql = '
-    CREATE TABLE IF NOT EXISTS students (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        birth_date TEXT
-    );
+$connection = new PDO('mysql:host=localhost;dbname=banco',
+               'user',
+               'passwd'
+);
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-    CREATE TABLE IF NOT EXISTS phones (
-        id INTEGER PRIMARY KEY,
-        area_code TEXT,
-        number TEXT,
-        student_id INTEGER,
-        FOREIGN KEY(student_id) REFERENCES students(id)
-    );
-';
+echo "Banco conectado!<br><br>";
 
-$pdo->exec($createTableSql);
+$repository = new PdoStudentRepository($connection);
+$studentList = $repository->allStudents();
 
-echo 'Tabelas criadas';
+var_dump($studentList);
