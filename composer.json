@@ -1,0 +1,17 @@
+{
+    "name": "marcos/php",
+    "autoload": {
+        "psr-4": {
+            "Marcos\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcos Marques",
+            "email": "67377101+maleixorm@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
