@@ -6,6 +6,10 @@
     <title>Sanitize & Validation no PHP</title>
 </head>
 <body>
-    
+<form action="formulario_tratamento.php" method="post">
+        <input type="text" name="name" placeholder="Digite seu nome...">
+        <input type="email" name="email" placeholder="Digite seu e-mail...">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
